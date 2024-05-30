@@ -4,6 +4,11 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+
+//MIDDLEWARES
+app.use(express.json());
+
+
 //ROUTES
 app.use('/', routes);
 
