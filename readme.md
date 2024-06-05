@@ -5,7 +5,7 @@ Always Music 2
 
 ## Descripción del proyecto
 
-En este dproyecto nbuscamos validar nuestros conocimientos de Instalación y configuración de la
+En este dproyecto buscamos validar nuestros conocimientos de Instalación y configuración de la
 librería pg, Propiedades del objeto result y la asincronía en una consulta, Ingresando y
 consultando datos, como también Actualizando y eliminando datos.
 
@@ -13,7 +13,7 @@ consultando datos, como también Actualizando y eliminando datos.
 
 Incluir capturas de pantalla o imágenes que muestren el proyecto en funcionamiento.
 
-![Home](./assets/img/Captura%20de%20pantalla%202024-05-24%20a%20la(s)%204.36.25 p. m..png)
+![Home](./assets/img/)
 
 Vista de una de las consultas solicitadas
 
@@ -30,7 +30,7 @@ npm init -y
 
 
 ```bash
-npm i express pg dotenv pg
+npm i express pg dotenv
 ```
 
 ## Instrucciones para Ejecutar el Proyecto
@@ -38,7 +38,7 @@ npm i express pg dotenv pg
 Instrucciones para ejecutar el proyecto una vez instalado.
 
 ```bash
- node queries/queries add Rayan 960182998 trompet 3
+ node model/queries add Rayan 960182998 trompet 3
 ```
 ```bash
  node queries/queries show Peter 160182998
