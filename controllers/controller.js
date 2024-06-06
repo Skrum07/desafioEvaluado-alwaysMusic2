@@ -17,7 +17,6 @@ export const getUsers = async (req, res) => {
 }
 
 export const getUserByRut = async (req, res) => {
-    /* const { rut } = req.params; */
     const { rut } = req.query;
     const user = await getUserByRutQuery(rut);
     res.send(user);
