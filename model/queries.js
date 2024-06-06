@@ -16,7 +16,6 @@ const addUserQuery = async(name, rut, course, level) => {
         }
         const response = await pool.query(sql);
 
-        // console.log(response);
         if(response.rowCount > 0) return response.rows[0];
 
     } catch (error) {
@@ -24,20 +23,24 @@ const addUserQuery = async(name, rut, course, level) => {
     }
 };
 
+//Consultar estudiantes registrados
 const getUsersQuery = async () => {
     try {
       const sql = {
-        text: "SELECT * FROM users",
+        text: "select * from users",
+        rowMode: "array", //Da formato de arreglo a la respuesta
         
       };
   
       const response = await pool.query(sql);
       if (response.rowCount > 0) return response.rows;
+
     } catch (error) {
-      console.log(`Error Code: ${error.code}, Error Message: ${error.message}`);
+      console.log(`Error: ${error.code}, Error Message: ${error.message}`);
     }
   };
-const getUserByRutQuery = async (rut) => {
+//Consultar estudiantes por rut
+  const getUserByRutQuery = async (rut) => {
     try {
       const sql = {
         text: "SELECT * FROM users where rut = $1",
@@ -56,7 +59,7 @@ const getUserByRutQuery = async (rut) => {
     }
   };
   
-  
+  //Actualizar info de un estudiante
   const updateUserQuery = async (name, rut, course, level, id) => {
     try {
       const sql = {
@@ -70,7 +73,7 @@ const getUserByRutQuery = async (rut) => {
     }
   }
   
-  
+  //Eliminar un estudiante
   const deleteUserQuery = async (id) => {
       try {
         const sql = {

@@ -1,4 +1,4 @@
-import { addUserQuery } from "../model/queries.js";
+import { addUserQuery, getUsersQuery, getUserByRutQuery, updateUserQuery, deleteUserQuery } from "../model/queries.js";
 
 export const home = (req, res) => {
     res.send('Hello World from controller file!');
@@ -17,7 +17,7 @@ export const getUsers = async (req, res) => {
 }
 
 export const getUserByRut = async (req, res) => {
-    const { rut } = req.query;
+    const { rut } = req.params;
     const user = await getUserByRutQuery(rut);
     res.send(user);
 }

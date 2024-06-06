@@ -13,7 +13,7 @@ router.get('/users', getUsers);
 
 
 //ROUTE TO GET USER BY RUT
-router.get('/user/rut', getUserByRut);
+router.get('/user/:rut', getUserByRut);
 
 
 //ROUTE TO UPDATE USER
